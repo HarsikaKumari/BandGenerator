@@ -34,6 +34,11 @@ app.post("/submit", (req, res) => {
   res.render("index.ejs", { adjective: randomAdj, noun: randomNoun });
 });
 
+app.post("/redirect", (req, res) => {
+  // res.render("redirect");
+  res.render("index.ejs");
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
